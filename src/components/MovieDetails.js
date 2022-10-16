@@ -10,7 +10,7 @@ function MovieDetails() {
 
   async function fetchData() {
     const res = await fetch(
-      `https://api.themoviedb.org/3/movie/${id}?api_key=1e89e6a0912547480f048b9308ae369b&language=en-US)`
+      `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US)`
     );
 
     const data = await res.json();
